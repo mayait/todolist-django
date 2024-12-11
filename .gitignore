@@ -1,0 +1,4 @@
+
+*.pyc
+mi_proyecto/media/adjuntos/query_result.xlsx
+mi_proyecto/db.sqlite3

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}
+Crear nuevo proyecto
+{% endblock title %}
+
+
+{% block content %}
+HOLA
+<form method="POST" enctype="multipart/form-data" class="form">
+    
+    {% csrf_token %}
+
+    <h2 class="h4">Datos del Proyecto</h2>
+    <div class="mb-3">
+
+        {{ proyecto_form.as_p }}
+
+    </div>
+    <hr>
+    
+    <h2 class="h4 mt-4">Tareas</h2>
+
+    {{ tarea_formset.management_form }}
+    {% for form in tarea_formset %}
+        <div class="border rounded p-3 mb-3 bg-white">
+            {{ form.as_p }}
+        </div>
+    {% endfor %}
+    <button type="submit" class="btn btn-primary">Crear Proyecto</button>
+</form>
+
+{% endblock content %}
+
+
