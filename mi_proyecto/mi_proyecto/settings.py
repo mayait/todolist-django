@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'django_extensions',
+    'rest_framework',
     # mis apps
     'proyectos',
 ]
